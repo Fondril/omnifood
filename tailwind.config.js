@@ -13,6 +13,8 @@ module.exports = {
     extend: {
       boxShadow: {
         inset3pxWhite: "inset 0 0 0 3px #fff",
+        cardShadow: "0 1.5rem 3rem rgba(0, 0, 0, 0.12)",
+        cardShadowHover: "0 2rem 4rem rgba(0, 0, 0, 0.09)",
       },
     },
   },
