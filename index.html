@@ -18,46 +18,48 @@
     class="leading-none font-sans font-[400] text-textGrey555 p-0 m-0 box-border font-rubik"
   >
     <header class="flex items-center justify-between bg-[#fdf2e9] h-24 px-12">
-      <img
-        class="h-[22px]"
-        src="content/img/omnifood-logo.png"
-        alt="Omnifood logo"
-      />
+      <a href="#">
+        <img
+          class="h-[22px]"
+          src="content/img/omnifood-logo.png"
+          alt="Omnifood logo"
+        />
+      </a>
       <nav>
         <ul class="list-none flex gap-8 items-center">
           <li>
             <a
               class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
-              >Section 1</a
+              >How it works</a
             >
           </li>
           <li>
             <a
               class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
-              >Section 2</a
+              >Meals</a
             >
           </li>
           <li>
             <a
               class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
-              >Section 3</a
+              >Testimonials</a
             >
           </li>
           <li>
             <a
               class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
-              >Section 4</a
+              >Pricing</a
             >
           </li>
           <li>
             <a
               class="text-[#fff] inline-block font-medium text-[18px] transition-all duration-150 ease-linear bg-primary rounded-[9px] px-6 py-3 hover:bg-[#cf711f]"
               href="#"
-              >Section 5</a
+              >Try for free</a
             >
           </li>
         </ul>
@@ -628,7 +630,7 @@
         </div>
       </section>
 
-      <section class="pt-24 pb-24">
+      <section class="py-24">
         <div class="max-w-[75rem] px-8 my-0 mx-auto">
           <span
             class="block text-[1.25rem] text-[#cf711f] font-medium uppercase mb-4 tracking-[0.75px]"
@@ -820,6 +822,248 @@
           </div>
         </div>
       </section>
+
+      <section class="mb-24 pt-12 pb-32">
+        <div class="max-w-[75rem] px-8 my-0 mx-auto">
+          <div
+            class="grid grid-cols-[2fr_1fr] shadow-CTAShadow rounded-[11px] bg-gradient-to-br from-[#eb984e] to-[#e67e22] overflow-hidden"
+          >
+            <div class="pt-12 pl-16 pb-16 pr-16 text-[#45260a]">
+              <h2
+                class="text-[2.75rem] text-[#45260a] tracking-tighter font-bold leading-[1.2] mb-8"
+              >
+                Get your first meal for free!
+              </h2>
+              <p class="text-[#45260a] text-[1.125rem] leading-[1.8] mb-12">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+              <form class="grid grid-cols-2 gap-x-8 gap-y-6" action="#">
+                <div>
+                  <label
+                    class="block text-[1rem] font-medium mb-3"
+                    for="fullName"
+                    >Full Name</label
+                  >
+                  <input
+                    class="w-full p-3 text-[1.125rem] font-[inherit] border-none bg-[#fdf2e9] rounded-[9px] shadow-inputFieldShadow placeholder:text-[#aaa] text-[inherit]"
+                    id="fullName"
+                    type="text"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="block text-[1rem] font-medium mb-3" for="email"
+                    >Email address</label
+                  >
+                  <input
+                    class="w-full p-3 text-[1.125rem] font-[inherit] border-none bg-[#fdf2e9] rounded-[9px] shadow-inputFieldShadow placeholder:text-[#aaa] text-[inherit]"
+                    id="email"
+                    type="email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-[1rem] font-medium mb-3"
+                    for="selectWhere"
+                    >Where did you hear from us?</label
+                  >
+                  <select
+                    class="w-full p-3 text-[1.125rem] font-[inherit] border-none bg-[#fdf2e9] rounded-[9px] shadow-inputFieldShadow placeholder:text-[#aaa] text-[inherit]"
+                    id="selectWhere"
+                    required
+                  >
+                    <option value="">Please choose one option:</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">Youtube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Facebook ad</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+
+                <button
+                  class="block bg-[#45260a] text-[#fdf2e9] decoration-0 text-[1.25rem] py-3 px-8 rounded-[9px] hover:bg-[#fff] hover:text-textGrey555 self-end transition-all duration-200 ease-linear font-[600]"
+                >
+                  Sign up now
+                </button>
+              </form>
+            </div>
+            <div
+              class="bg-CTAImage bg-cover bg-center"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-32 border-t-[1px] border-[#eee]">
+        <div
+          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr]"
+        >
+          <div class="flex flex-col">
+            <a class="block mb-8" href="#">
+              <img
+                class="h-[22px]"
+                src="content/img/omnifood-logo.png"
+                alt="Omnifood logo"
+              />
+            </a>
+
+            <ul class="flex gap-6">
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  ><ion-icon class="h-6 w-6" name="logo-instagram"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  ><ion-icon class="h-6 w-6" name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  ><ion-icon class="h-6 w-6" name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+            </ul>
+
+            <p class="text-[0.875rem] text-[#767676] leading-[1.8] mt-auto">
+              Copyright &copy; 2025 by Omnifood, Inc. All rights reserved
+            </p>
+          </div>
+          <div>
+            <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
+              Contact us:
+            </p>
+            <address class="not-italic text-[1rem] leading-[1.6]">
+              <p class="mb-6">
+                623 Harrison St., 2nd Floor, San Francisco, CA 94107
+              </p>
+              <p>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="tel:415-201-6370"
+                  >415-201-6370</a
+                ><br />
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="mailto:hello@omnifood.com"
+                  >hello@omnifood.com</a
+                >
+              </p>
+            </address>
+          </div>
+          <nav>
+            <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
+              Account
+            </p>
+            <ul class="flex flex-col gap-6">
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Create account</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Sign in</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >iOS app</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Android app</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
+              Company
+            </p>
+            <ul class="flex flex-col gap-6">
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >About Omnifood</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >For Business</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Cooking partners</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
+              Resources
+            </p>
+            <ul class="flex flex-col gap-6">
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Recipe directory</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Help center</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-[1rem] text-[#767676] transition-all ease-linear duration-150 hover:text-textGrey555"
+                  href="#"
+                  >Privacy & terms</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
     </main>
 
     <script
