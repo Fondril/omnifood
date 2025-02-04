@@ -2,6 +2,13 @@
 module.exports = {
   content: ["./*.{html, js}"],
   theme: {
+    screens: {
+      sLaptops: { max: `84em` },
+      landscapeTablets: { max: `75em` },
+      tablets: { max: `59em` },
+      smallerTablets: { max: `44em` },
+      phones: { max: `34em` },
+    },
     fontFamily: {
       rubik: ["Rubik", "serif"],
     },
@@ -11,6 +18,11 @@ module.exports = {
       textGrey333: "#333",
     },
     extend: {
+      fontSize: {
+        body: `100%`,
+        bodyLandscapeTablet: `90%`,
+        bodyTablet: `80%`,
+      },
       backgroundImage: {
         CTAImage:
           "linear-gradient(to right bottom, rgba(235,151,78,0.35), rgba(230,125,34,0.35)), url(content/img/eating.jpg)",

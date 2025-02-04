@@ -17,7 +17,10 @@
   <body
     class="leading-none font-sans font-[400] text-textGrey555 p-0 m-0 box-border font-rubik"
   >
-    <header class="flex items-center justify-between bg-[#fdf2e9] h-24 px-12">
+    <header
+      id="header"
+      class="flex items-center justify-between bg-[#fdf2e9] h-24 px-12 landscapeTablets:px-8 relative header"
+    >
       <a href="#">
         <img
           class="h-[22px]"
@@ -25,54 +28,73 @@
           alt="Omnifood logo"
         />
       </a>
-      <nav>
-        <ul class="list-none flex gap-8 items-center">
+      <nav
+        id="mainNav"
+        class="z-10 tablets:absolute tablets:bg-[rgba(255,255,255,0.99)] tablets:top-0 tablets:left-0 tablets:flex tablets:justify-center tablets:items-center tablets:w-full tablets:h-screen transition-all ease-in duration-200 tablets:translate-x-[100%] tablets:opacity-0 tablets:pointer-events-none tablets:invisible mainNav"
+      >
+        <ul
+          class="list-none flex tablets:flex-col gap-12 tablets:gap-12 landscapeTablets:gap-8 items-center"
+        >
           <li>
             <a
-              class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
+              class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
               >How it works</a
             >
           </li>
           <li>
             <a
-              class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
+              class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
               >Meals</a
             >
           </li>
           <li>
             <a
-              class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
+              class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
               >Testimonials</a
             >
           </li>
           <li>
             <a
-              class="text-textGrey333 inline-block font-medium text-[18px] transition-all duration-150 ease-linear hover:text-[#cf711f]"
+              class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
               href="#"
               >Pricing</a
             >
           </li>
           <li>
             <a
-              class="text-[#fff] inline-block font-medium text-[18px] transition-all duration-150 ease-linear bg-primary rounded-[9px] px-6 py-3 hover:bg-[#cf711f]"
+              class="text-[#fff] inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear bg-primary rounded-[9px] px-6 py-3 hover:bg-[#cf711f]"
               href="#"
               >Try for free</a
             >
           </li>
         </ul>
       </nav>
+      <button class="hidden z-20 tablets:block">
+        <ion-icon
+          id="openMenuIcon"
+          class="h-12 w-12 text-textGrey333"
+          name="menu-outline"
+          onclick="onOpenMenuClick()"
+        ></ion-icon>
+        <ion-icon
+          id="closeMenuIcon"
+          class="h-12 w-12 text-textGrey333 hidden"
+          name="close-outline"
+          onclick="onCloseMenuClick()"
+        ></ion-icon>
+      </button>
     </header>
     <main>
-      <section class="bg-[#fdf2e9] pt-12 pb-24">
+      <section class="bg-[#fdf2e9] pt-12 phones:pt-6 pb-24 phones:pb-12">
         <div
-          class="grid grid-cols-2 gap-24 max-w-[81.25rem] mx-auto my-0 items-center px-8"
+          class="grid grid-cols-2 tablets:grid-cols-1 gap-24 tablets:gap-16 landscapeTablets:gap-12 max-w-[81.25rem] mx-auto my-0 items-center px-8 tablets:px-20 sLaptops:max-w-[75rem] phones:px-8"
         >
-          <div>
+          <div class="tablets:text-center">
             <h1
-              class="text-[3.2rem] text-textGrey333 leading-[1.05] font-[700] tracking-[-0.5px] mb-8"
+              class="text-[3.2rem] sLaptops:text-[2.75rem] text-textGrey333 leading-[1.05] font-[700] tracking-[-0.5px] mb-8"
             >
               A healthy meal delivered to your door, every single day
             </h1>
@@ -83,15 +105,17 @@
             </p>
             <a
               href="#"
-              class="inline-block bg-primary text-[#fff] decoration-0 text-[1.25rem] py-4 px-8 rounded-[9px] hover:bg-[#cf711f] transition-all duration-200 ease-linear mr-4 font-[600]"
+              class="inline-block bg-primary text-[#fff] decoration-0 text-[1.25rem] py-4 px-8 rounded-[9px] hover:bg-[#cf711f] transition-all duration-200 ease-linear mr-4 font-[600] phones:py-6 phones:px-4"
               >Start eating well</a
             >
             <a
               href="#"
-              class="inline-block bg-[#fff] text-textGrey555 decoration-0 text-[1.25rem] py-4 px-8 rounded-[9px] hover:bg-[#fdf2e9] hover:shadow-inset3pxWhite transition-all duration-200 ease-linear font-[600]"
+              class="inline-block bg-[#fff] text-textGrey555 decoration-0 text-[1.25rem] py-4 px-8 rounded-[9px] hover:bg-[#fdf2e9] hover:shadow-inset3pxWhite transition-all duration-200 ease-linear font-[600] phones:py-6 phones:px-4"
               >Learn more &darr;</a
             >
-            <div class="flex mt-20 items-center gap-[16px]">
+            <div
+              class="flex mt-20 tablets:mt-8 items-center gap-[16px] tablets:justify-center phones:gap-12"
+            >
               <div class="flex">
                 <img
                   class="h-12 w-12 rounded-[50%] mr-[-16px] border-solid border-[3px] border-[#fdf2e9]"
@@ -124,15 +148,15 @@
                   alt="Customer photo"
                 />
               </div>
-              <p class="text-[18px] font-semibold">
+              <p class="text-[18px] phones:text-[14px] font-semibold">
                 <span class="font-bold text-[#cf711f]">250,000+</span> meals
                 delivered last year!
               </p>
             </div>
           </div>
-          <div>
+          <div class="tablets:flex tablets:justify-center">
             <img
-              class="w-full"
+              class="w-full tablets:w-[60%] phones:w-[80%]"
               src="./content/img/hero.png"
               alt="Woman enjoying food, meals in storage container, and food bowls on table"
             />
@@ -149,27 +173,27 @@
           </h2>
           <div class="flex justify-around">
             <img
-              class="h-8 brightness-0 opacity-50"
+              class="h-8 tablets:h-6 phones:h-3 brightness-0 opacity-50"
               src="/content/img/logos/techcrunch.png"
               alt="Techcrunch logo"
             />
             <img
-              class="h-8 brightness-0 opacity-50"
+              class="h-8 tablets:h-6 phones:h-3 brightness-0 opacity-50"
               src="/content/img/logos/business-insider.png"
               alt="Business Insider logo"
             />
             <img
-              class="h-8 brightness-0 opacity-50"
+              class="h-8 tablets:h-6 phones:h-3 brightness-0 opacity-50"
               src="/content/img/logos/the-new-york-times.png"
               alt="The New York Times logo"
             />
             <img
-              class="h-8 brightness-0 opacity-50"
+              class="h-8 tablets:h-6 phones:h-3 brightness-0 opacity-50"
               src="/content/img/logos/forbes.png"
               alt="Forbes logo"
             />
             <img
-              class="h-8 brightness-0 opacity-50"
+              class="h-8 tablets:h-6 phones:h-3 brightness-0 opacity-50"
               src="/content/img/logos/usa-today.png"
               alt="USA Today logo"
             />
@@ -185,20 +209,24 @@
             How it works
           </p>
           <h2
-            class="text-[2.75rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24"
+            class="text-[2.75rem] landscapeTablets:text-[2.25rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24 smallerTablets:pb-12"
           >
             Your daily dose of health in 3 simple steps
           </h2>
         </div>
 
         <div
-          class="grid grid-cols-2 gap-y-[6rem] gap-x-16 max-w-[75rem] px-8 my-0 mx-auto items-center"
+          class="grid grid-cols-2 phones:grid-cols-1 gap-y-[6rem] gap-x-16 landscapeTablets:gap-y-16 landscapeTablets:gap-x-12 max-w-[75rem] px-8 my-0 mx-auto items-center"
         >
           <!-- Step 1 -->
           <div class="">
-            <p class="text-[5.375rem] font-semibold text-[#ddd] mb-3">01</p>
+            <p
+              class="text-[5.375rem] tablets:text-[4.625rem] font-semibold text-[#ddd] mb-3"
+            >
+              01
+            </p>
             <h3
-              class="text-[1.875rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
+              class="text-[1.875rem] landscapeTablets:text-[1.5rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
             >
               Tell us what you like (and what not)
             </h3>
@@ -209,7 +237,9 @@
               matter what diet you follow!
             </p>
           </div>
-          <div class="flex items-center justify-center relative">
+          <div
+            class="flex items-center justify-center relative phones:row-[1] phones:translate-y-6"
+          >
             <div
               class="rounded-[50%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] pb-[60%] bg-[#fdf2e9] -z-20"
             ></div>
@@ -223,7 +253,9 @@
             />
           </div>
           <!-- Step 2 -->
-          <div class="flex items-center justify-center relative">
+          <div
+            class="flex items-center justify-center relative phones:translate-y-6"
+          >
             <div
               class="rounded-[50%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] pb-[60%] bg-[#fdf2e9] -z-20"
             ></div>
@@ -237,9 +269,13 @@
             />
           </div>
           <div>
-            <p class="text-[5.375rem] font-semibold text-[#ddd] mb-3">02</p>
+            <p
+              class="text-[5.375rem] tablets:text-[4.625rem] font-semibold text-[#ddd] mb-3"
+            >
+              02
+            </p>
             <h3
-              class="text-[1.875rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
+              class="text-[1.875rem] landscapeTablets:text-[1.5rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
             >
               Approve your weekly meal plan
             </h3>
@@ -251,9 +287,13 @@
           </div>
           <!-- Step 3 -->
           <div>
-            <p class="text-[5.375rem] font-semibold text-[#ddd] mb-3">03</p>
+            <p
+              class="text-[5.375rem] tablets:text-[4.625rem] font-semibold text-[#ddd] mb-3"
+            >
+              03
+            </p>
             <h3
-              class="text-[1.875rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
+              class="text-[1.875rem] landscapeTablets:text-[1.5rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
             >
               Receive meals at convenient time
             </h3>
@@ -263,7 +303,9 @@
               change delivery schedule and address daily!
             </p>
           </div>
-          <div class="flex items-center justify-center relative">
+          <div
+            class="flex items-center justify-center relative phones:row-[5] phones:translate-y-6"
+          >
             <div
               class="rounded-[50%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] pb-[60%] bg-[#fdf2e9] -z-20"
             ></div>
@@ -279,21 +321,21 @@
         </div>
       </section>
 
-      <section class="px-24 py-24">
+      <section class="px-24 landscapeTablets:px-8 py-24">
         <div class="max-w-[75rem] px-8 my-0 mx-auto text-center">
           <span
             class="block text-[1.25rem] text-[#cf711f] font-medium uppercase mb-4 tracking-[0.75px]"
             >Meals</span
           >
           <h2
-            class="text-[2.75rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24"
+            class="text-[2.75rem] landscapeTablets:text-[2.25rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24 smallerTablets:pb-12"
           >
             Omnifood AI chooses from 5,000+ recipes
           </h2>
         </div>
 
         <div
-          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-3 gap-24 mb-12"
+          class="max-w-[75rem] px-8 tablets:px-0 my-0 mx-auto grid grid-cols-3 gap-24 sLaptops:gap-12 mb-12 smallerTablets:grid-cols-2 phones:grid-cols-1"
         >
           <div
             class="shadow-cardShadow rounded-[11px] overflow-hidden transition-all duration-300 ease-linear hover:-translate-y-3 hover:shadow-cardShadowHover"
@@ -304,7 +346,7 @@
               alt="Japanese gyozas"
             />
 
-            <div class="p-12 pt-8">
+            <div class="p-12 pt-8 tablets:p-8 tablets:pt-6">
               <div class="flex mb-3">
                 <span
                   class="inline-block py-1 px-2 text-[0.75rem] font-semibold uppercase bg-[#51cf66] text-textGrey333 rounded-[100px]"
@@ -393,9 +435,11 @@
             </div>
           </div>
 
-          <div>
+          <div
+            class="smallerTablets:col-span-full smallerTablets:justify-self-center"
+          >
             <h3
-              class="text-[1.875rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
+              class="text-[1.875rem] landscapeTablets:text-[1.5rem] leading-[1.2] mb-8 font-bold text-textGrey333 tracking-tighter"
             >
               Works with any diet:
             </h3>
@@ -478,19 +522,23 @@
         </div>
       </section>
 
-      <section class="grid grid-cols-[55fr,_45fr] items-center bg-[#fdf2e9]">
-        <div class="p-24">
+      <section
+        class="grid grid-cols-[55fr,_45fr] tablets:grid-cols-1 items-center bg-[#fdf2e9]"
+      >
+        <div class="p-24 landscapeTablets:px-8 landscapeTablets:py-24">
           <span
             class="block text-[1.25rem] text-[#cf711f] font-medium uppercase mb-4 tracking-[0.75px]"
             >Testimonials</span
           >
           <h2
-            class="text-[2.75rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24"
+            class="text-[2.75rem] landscapeTablets:text-[2.25rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24 smallerTablets:pb-12"
           >
             Once you try it, you can't go back
           </h2>
 
-          <div class="grid grid-cols-2 gap-12">
+          <div
+            class="grid grid-cols-2 gap-12 landscapeTablets:gap-8 phones:grid-cols-1"
+          >
             <figure>
               <img
                 class="w-16 rounded-[50%] mb-3"
@@ -542,87 +590,89 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 p-4">
+        <div
+          class="grid grid-cols-3 gap-4 p-4 sLaptops:grid-cols-2 tablets:grid-cols-6 phones:grid-cols-4 phones:gap-3"
+        >
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-1.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-2.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-3.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-4.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-5.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-6.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-7.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-8.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-9.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-10.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-11.jpg"
               alt="Photo of a beautifully arranged food"
             />
           </figure>
           <figure class="overflow-hidden">
             <img
-              class="block w-[80%] transition-all duration-150 ease-linear hover:scale-110"
+              class="block w-[80%] tablets:w-full transition-all duration-150 ease-linear hover:scale-110"
               src="/content/img/gallery/gallery-12.jpg"
               alt="Photo of a beautifully arranged food"
             />
@@ -637,17 +687,17 @@
             >Pricing</span
           >
           <h2
-            class="text-[2.75rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24"
+            class="text-[2.75rem] landscapeTablets:text-[2.25rem] text-textGrey333 tracking-tighter font-bold leading-[1.2] pb-24 smallerTablets:pb-12"
           >
             Eating well without breaking the bank
           </h2>
         </div>
 
         <div
-          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-2 gap-16 mb-12"
+          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-2 gap-16 landscapeTablets:gap-12 mb-12 phones:grid-cols-1"
         >
           <div
-            class="rounded-[11px] p-10 w-[75%] justify-self-end border-[4px] border-[#fdf2e9] border-solid"
+            class="rounded-[11px] p-10 w-[75%] smallerTablets:w-full justify-self-end border-[4px] border-[#fdf2e9] border-solid"
           >
             <header class="text-center mb-12">
               <p
@@ -663,28 +713,28 @@
               </p>
             </header>
             <ul class="list-none flex flex-col gap-4">
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>1 meal per day</span>
               </li>
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Order from 11am to 9pm</span>
               </li>
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Delivery is free</span>
               </li>
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="close-outline"
@@ -700,7 +750,7 @@
             </div>
           </div>
           <div
-            class="bg-[#fdf2e9] rounded-[11px] p-12 w-[75%] relative overflow-hidden"
+            class="bg-[#fdf2e9] rounded-[11px] p-12 w-[75%] smallerTablets:w-full relative overflow-hidden"
           >
             <div
               class="absolute uppercase font-bold text-[0.875rem] top-[6%] right-[-18%] bg-[#ffd43b] py-2 px-20 text-textGrey555 rotate-[45deg]"
@@ -721,28 +771,28 @@
               </p>
             </header>
             <ul class="list-none flex flex-col gap-4">
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span><strong>2 meal</strong> per day</span>
               </li>
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Order <strong>24/7</strong></span>
               </li>
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Delivery is free</span>
               </li>
-              <li class="text-[1.125rem] flex items-center gap-4">
+              <li class="text-[1.125rem] flex items-center gap-4 leading-[1.2]">
                 <ion-icon
                   class="w-[1.875rem] h-[1.875rem] text-[#e67e22]"
                   name="checkmark-outline"
@@ -767,7 +817,9 @@
           </aside>
         </div>
 
-        <div class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-4 gap-x-16">
+        <div
+          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-4 gap-x-16 landscapeTablets:gap-x-12 smallerTablets:grid-cols-2 phones:grid-cols-1"
+        >
           <div>
             <ion-icon
               class="text-[#e67e22] h-8 w-8 mb-8 bg-[#fdf2e9] p-4 rounded-[50%]"
@@ -826,11 +878,11 @@
       <section class="mb-24 pt-12 pb-32">
         <div class="max-w-[75rem] px-8 my-0 mx-auto">
           <div
-            class="grid grid-cols-[2fr_1fr] shadow-CTAShadow rounded-[11px] bg-gradient-to-br from-[#eb984e] to-[#e67e22] overflow-hidden"
+            class="grid grid-cols-[2fr_1fr] tablets:grid-cols-[3fr_2fr] shadow-CTAShadow rounded-[11px] bg-gradient-to-br from-[#eb984e] to-[#e67e22] overflow-hidden phones:grid-cols-1"
           >
             <div class="pt-12 pl-16 pb-16 pr-16 text-[#45260a]">
               <h2
-                class="text-[2.75rem] text-[#45260a] tracking-tighter font-bold leading-[1.2] mb-8"
+                class="text-[2.75rem] landscapeTablets:text-[2.25rem] text-[#45260a] tracking-tighter font-bold leading-[1.2] mb-8"
               >
                 Get your first meal for free!
               </h2>
@@ -839,7 +891,10 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
-              <form class="grid grid-cols-2 gap-x-8 gap-y-6" action="#">
+              <form
+                class="grid grid-cols-2 tablets:grid-cols-1 gap-x-8 gap-y-6"
+                action="#"
+              >
                 <div>
                   <label
                     class="block text-[1rem] font-medium mb-3"
@@ -886,14 +941,14 @@
                 </div>
 
                 <button
-                  class="block bg-[#45260a] text-[#fdf2e9] decoration-0 text-[1.25rem] py-3 px-8 rounded-[9px] hover:bg-[#fff] hover:text-textGrey555 self-end transition-all duration-200 ease-linear font-[600]"
+                  class="block bg-[#45260a] text-[#fdf2e9] decoration-0 text-[1.25rem] py-3 px-8 rounded-[9px] tablets:mt-3 hover:bg-[#fff] hover:text-textGrey555 self-end transition-all duration-200 ease-linear font-[600]"
                 >
                   Sign up now
                 </button>
               </form>
             </div>
             <div
-              class="bg-CTAImage bg-cover bg-center"
+              class="bg-CTAImage bg-cover bg-center phones:h-[20rem] phones:row-[1]"
               role="img"
               aria-label="Woman enjoying food"
             ></div>
@@ -903,9 +958,11 @@
 
       <footer class="py-32 border-t-[1px] border-[#eee]">
         <div
-          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr]"
+          class="max-w-[75rem] px-8 my-0 mx-auto grid grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] smallerTablets:grid-cols-6 smallerTablets:gap-y-24"
         >
-          <div class="flex flex-col">
+          <div
+            class="flex flex-col smallerTablets:col-span-3 smallerTablets:row-[2]"
+          >
             <a class="block mb-8" href="#">
               <img
                 class="h-[22px]"
@@ -939,10 +996,11 @@
             </ul>
 
             <p class="text-[0.875rem] text-[#767676] leading-[1.8] mt-auto">
-              Copyright &copy; 2025 by Omnifood, Inc. All rights reserved
+              Copyright &copy; <span id="footerYear">2025</span> by Omnifood,
+              Inc. All rights reserved
             </p>
           </div>
-          <div>
+          <div class="smallerTablets:col-span-3 smallerTablets:row-[2]">
             <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
               Contact us:
             </p>
@@ -964,7 +1022,7 @@
               </p>
             </address>
           </div>
-          <nav>
+          <nav class="smallerTablets:col-span-2 smallerTablets:row-[1]">
             <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
               Account
             </p>
@@ -999,7 +1057,7 @@
               </li>
             </ul>
           </nav>
-          <nav>
+          <nav class="smallerTablets:col-span-2 smallerTablets:row-[1]">
             <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
               Company
             </p>
@@ -1034,7 +1092,7 @@
               </li>
             </ul>
           </nav>
-          <nav>
+          <nav class="smallerTablets:col-span-2 smallerTablets:row-[1]">
             <p class="text-[1.125rem] text-textGrey555 font-medium mb-10">
               Resources
             </p>
@@ -1066,6 +1124,22 @@
       </footer>
     </main>
 
+    <script>
+      function onOpenMenuClick() {
+        document.getElementById("header").classList.add("openNav");
+        document.getElementById("openMenuIcon").classList.add("hidden");
+        document.getElementById("closeMenuIcon").classList.remove("hidden");
+      }
+      function onCloseMenuClick() {
+        document.getElementById("header").classList.remove("openNav");
+        document.getElementById("openMenuIcon").classList.remove("hidden");
+        document.getElementById("closeMenuIcon").classList.add("hidden");
+      }
+
+      const footerYearElement = document.getElementById("footerYear");
+      const currentYear = new Date().getFullYear();
+      footerYearElement.innerText = currentYear;
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

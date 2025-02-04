@@ -3,10 +3,32 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply text-body;
+  }
+  html {
+    @apply overflow-x-hidden;
+  }
+  body {
+    @apply overflow-x-hidden;
+  }
   :focus-visible {
     @apply shadow-focusShadow outline-none;
   }
   form *:focus-visible {
     @apply shadow-formFocusShadow outline-none;
+  }
+  @screen landscapeTablets {
+    html {
+      @apply text-bodyLandscapeTablet;
+    }
+  }
+  @screen tablets {
+    html {
+      @apply text-bodyTablet;
+    }
+  }
+  .openNav .mainNav {
+    @apply tablets:opacity-100 visible pointer-events-auto translate-x-0;
   }
 }
