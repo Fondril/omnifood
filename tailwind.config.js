@@ -19,9 +19,9 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        body: `100%`,
-        bodyLandscapeTablet: `90%`,
-        bodyTablet: `80%`,
+        body: `16px`,
+        bodyLandscapeTablet: `14.4px`,
+        bodyTablet: `12.8px`,
       },
       backgroundImage: {
         CTAImage:
@@ -35,6 +35,7 @@ module.exports = {
         inputFieldShadow: "0 1rem 2rem rgba(0, 0, 0, 0.1)",
         focusShadow: "0 0 0 8px rgba(230, 125, 34, 0.5)",
         formFocusShadow: "0 0 0 8px rgba(253, 242, 233, 0.5)",
+        navShadow: "0 1.2 3.2 rgba(0, 0, 0, 0.06)",
       },
     },
   },

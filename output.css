@@ -555,12 +555,14 @@ video {
 }
 
 html {
-  font-size: 100%;
+  font-size: 16px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 :focus-visible {
@@ -581,13 +583,13 @@ form *:focus-visible {
 
 @media (max-width: 75em) {
   html {
-    font-size: 90%;
+    font-size: 14.4px;
   }
 }
 
 @media (max-width: 59em) {
   html {
-    font-size: 80%;
+    font-size: 12.8px;
   }
 }
 
@@ -608,6 +610,10 @@ form *:focus-visible {
   width: 100%;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -616,12 +622,20 @@ form *:focus-visible {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-1\/2 {
   left: 50%;
 }
 
 .right-\[-18\%\] {
   right: -18%;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-1\/2 {
@@ -644,8 +658,12 @@ form *:focus-visible {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .m-0 {
@@ -746,8 +764,8 @@ form *:focus-visible {
   height: 3rem;
 }
 
-.h-24 {
-  height: 6rem;
+.h-20 {
+  height: 5rem;
 }
 
 .h-6 {
@@ -1028,6 +1046,10 @@ form *:focus-visible {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.99\)\] {
+  background-color: rgba(255,255,255,0.99);
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(230 126 34 / var(--tw-bg-opacity, 1));
@@ -1143,6 +1165,10 @@ form *:focus-visible {
   padding-bottom: 1rem;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -1177,6 +1203,10 @@ form *:focus-visible {
 
 .pr-16 {
   padding-right: 4rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .pt-12 {
@@ -1406,6 +1436,12 @@ form *:focus-visible {
 .shadow-inputFieldShadow {
   --tw-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: 0 1rem 2rem var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-navShadow {
+  --tw-shadow: 0 1.2 3.2 rgba(0, 0, 0, 0.06);
+  --tw-shadow-colored: 0 1.2 3.2 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1647,8 +1683,8 @@ form *:focus-visible {
     gap: 4rem;
   }
 
-  .tablets\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.99\)\] {
-    background-color: rgba(255,255,255,0.99);
+  .tablets\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.9\)\] {
+    background-color: rgba(255,255,255,0.9);
   }
 
   .tablets\:p-8 {
@@ -1683,6 +1719,12 @@ form *:focus-visible {
 
   .tablets\:opacity-0 {
     opacity: 0;
+  }
+
+  .tablets\:backdrop-blur-\[5px\] {
+    --tw-backdrop-blur: blur(5px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 }
 

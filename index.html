@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
     <title>Omnifood</title>
+
+    <link rel="icon" href="./content/img/favicon64.png" />
+    <link rel="apple-touch-icon" href="./content/img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +27,7 @@
   >
     <header
       id="header"
-      class="flex items-center justify-between bg-[#fdf2e9] h-24 px-12 landscapeTablets:px-8 relative header"
+      class="flex items-center justify-between h-20 px-12 landscapeTablets:px-8 w-full z-40 pt-0 pb-0 top-0 bottom-0 bg-[#fdf2e9] relative shadow-navShadow header"
     >
       <a href="#">
         <img
@@ -30,49 +38,54 @@
       </a>
       <nav
         id="mainNav"
-        class="z-10 tablets:absolute tablets:bg-[rgba(255,255,255,0.99)] tablets:top-0 tablets:left-0 tablets:flex tablets:justify-center tablets:items-center tablets:w-full tablets:h-screen transition-all ease-in duration-200 tablets:translate-x-[100%] tablets:opacity-0 tablets:pointer-events-none tablets:invisible mainNav"
+        class="z-10 tablets:absolute tablets:bg-[rgba(255,255,255,0.9)] tablets:backdrop-blur-[5px] tablets:top-0 tablets:left-0 tablets:flex tablets:justify-center tablets:items-center tablets:w-full tablets:h-screen transition-all ease-in duration-200 tablets:translate-x-[100%] tablets:opacity-0 tablets:pointer-events-none tablets:invisible mainNav"
       >
         <ul
           class="list-none flex tablets:flex-col gap-12 tablets:gap-12 landscapeTablets:gap-8 items-center"
         >
           <li>
             <a
+              onclick="onCloseMenuClick()"
               class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
-              href="#"
+              href="#howItWorksSection"
               >How it works</a
             >
           </li>
           <li>
             <a
+              onclick="onCloseMenuClick()"
               class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
-              href="#"
+              href="#mealsSection"
               >Meals</a
             >
           </li>
           <li>
             <a
+              onclick="onCloseMenuClick()"
               class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
-              href="#"
+              href="#testimonialsSection"
               >Testimonials</a
             >
           </li>
           <li>
             <a
+              onclick="onCloseMenuClick()"
               class="text-textGrey333 inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear hover:text-[#cf711f]"
-              href="#"
+              href="#pricingSection"
               >Pricing</a
             >
           </li>
           <li>
             <a
+              onclick="onCloseMenuClick()"
               class="text-[#fff] inline-block font-medium text-[18px] tablets:text-[1.875rem] transition-all duration-150 ease-linear bg-primary rounded-[9px] px-6 py-3 hover:bg-[#cf711f]"
-              href="#"
+              href="#CTASection"
               >Try for free</a
             >
           </li>
         </ul>
       </nav>
-      <button class="hidden z-20 tablets:block">
+      <button class="hidden z-50 tablets:block">
         <ion-icon
           id="openMenuIcon"
           class="h-12 w-12 text-textGrey333"
@@ -88,7 +101,10 @@
       </button>
     </header>
     <main>
-      <section class="bg-[#fdf2e9] pt-12 phones:pt-6 pb-24 phones:pb-12">
+      <section
+        id="heroSection"
+        class="bg-[#fdf2e9] pt-12 phones:pt-6 pb-24 phones:pb-12"
+      >
         <div
           class="grid grid-cols-2 tablets:grid-cols-1 gap-24 tablets:gap-16 landscapeTablets:gap-12 max-w-[81.25rem] mx-auto my-0 items-center px-8 tablets:px-20 sLaptops:max-w-[75rem] phones:px-8"
         >
@@ -104,12 +120,12 @@
               nutritional needs.
             </p>
             <a
-              href="#"
+              href="#CTASection"
               class="inline-block bg-primary text-[#fff] decoration-0 text-[1.25rem] py-4 px-8 rounded-[9px] hover:bg-[#cf711f] transition-all duration-200 ease-linear mr-4 font-[600] phones:py-6 phones:px-4"
               >Start eating well</a
             >
             <a
-              href="#"
+              href="#howItWorksSection"
               class="inline-block bg-[#fff] text-textGrey555 decoration-0 text-[1.25rem] py-4 px-8 rounded-[9px] hover:bg-[#fdf2e9] hover:shadow-inset3pxWhite transition-all duration-200 ease-linear font-[600] phones:py-6 phones:px-4"
               >Learn more &darr;</a
             >
@@ -155,11 +171,15 @@
             </div>
           </div>
           <div class="tablets:flex tablets:justify-center">
-            <img
-              class="w-full tablets:w-[60%] phones:w-[80%]"
-              src="./content/img/hero.png"
-              alt="Woman enjoying food, meals in storage container, and food bowls on table"
-            />
+            <picture>
+              <source srcset="./content/img/hero-min.webp" type="image/webp" />
+              <source srcset="./content/img/hero.png" type="image/png" />
+              <img
+                class="w-full tablets:w-[60%] phones:w-[80%]"
+                src="./content/img/hero.png"
+                alt="Woman enjoying food, meals in storage container, and food bowls on table"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -201,7 +221,7 @@
         </div>
       </section>
 
-      <section class="py-24">
+      <section class="py-24" id="howItWorksSection">
         <div class="max-w-[75rem] px-8 my-0 mx-auto">
           <p
             class="text-[1.25rem] text-[#cf711f] font-medium uppercase mb-4 tracking-[0.75px]"
@@ -321,7 +341,7 @@
         </div>
       </section>
 
-      <section class="px-24 landscapeTablets:px-8 py-24">
+      <section class="px-24 landscapeTablets:px-8 py-24" id="mealsSection">
         <div class="max-w-[75rem] px-8 my-0 mx-auto text-center">
           <span
             class="block text-[1.25rem] text-[#cf711f] font-medium uppercase mb-4 tracking-[0.75px]"
@@ -524,6 +544,7 @@
 
       <section
         class="grid grid-cols-[55fr,_45fr] tablets:grid-cols-1 items-center bg-[#fdf2e9]"
+        id="testimonialsSection"
       >
         <div class="p-24 landscapeTablets:px-8 landscapeTablets:py-24">
           <span
@@ -680,7 +701,7 @@
         </div>
       </section>
 
-      <section class="py-24">
+      <section class="py-24" id="pricingSection">
         <div class="max-w-[75rem] px-8 my-0 mx-auto">
           <span
             class="block text-[1.25rem] text-[#cf711f] font-medium uppercase mb-4 tracking-[0.75px]"
@@ -875,7 +896,7 @@
         </div>
       </section>
 
-      <section class="mb-24 pt-12 pb-32">
+      <section class="mb-24 pt-12 pb-32" id="CTASection">
         <div class="max-w-[75rem] px-8 my-0 mx-auto">
           <div
             class="grid grid-cols-[2fr_1fr] tablets:grid-cols-[3fr_2fr] shadow-CTAShadow rounded-[11px] bg-gradient-to-br from-[#eb984e] to-[#e67e22] overflow-hidden phones:grid-cols-1"
@@ -996,7 +1017,7 @@
             </ul>
 
             <p class="text-[0.875rem] text-[#767676] leading-[1.8] mt-auto">
-              Copyright &copy; <span id="footerYear">2025</span> by Omnifood,
+              Copyright &copy; <span id="footerYear">2022</span> by Omnifood,
               Inc. All rights reserved
             </p>
           </div>
@@ -1139,6 +1160,37 @@
       const footerYearElement = document.getElementById("footerYear");
       const currentYear = new Date().getFullYear();
       footerYearElement.innerText = currentYear;
+
+      const heroSectionEl = document.getElementById("heroSection");
+      const observer = new IntersectionObserver(
+        function (entries) {
+          const ent = entries[0];
+          if (ent.isIntersecting === false) {
+            document.getElementById("heroSection").classList.add("mt-20");
+            document.getElementById("header").classList.add("fixed");
+            document
+              .getElementById("header")
+              .classList.add("bg-[rgba(255,255,255,0.99)]");
+            document.getElementById("header").classList.remove("relative");
+            document.getElementById("header").classList.remove("bg-[#fdf2e9]");
+          }
+          if (ent.isIntersecting === true) {
+            document.getElementById("heroSection").classList.remove("mt-20");
+            document.getElementById("header").classList.remove("fixed");
+            document
+              .getElementById("header")
+              .classList.remove("bg-[rgba(255,255,255,0.99)]");
+            document.getElementById("header").classList.add("relative");
+            document.getElementById("header").classList.add("bg-[#fdf2e9]");
+          }
+        },
+        {
+          root: null,
+          threshold: 0,
+          rootMargin: "-80px",
+        }
+      );
+      observer.observe(heroSectionEl);
     </script>
     <script
       type="module"
