@@ -170,13 +170,15 @@
               </p>
             </div>
           </div>
-          <div class="tablets:flex tablets:justify-center">
-            <picture>
+          <div>
+            <picture class="tablets:flex tablets:justify-center">
               <source srcset="./content/img/hero-min.webp" type="image/webp" />
               <source srcset="./content/img/hero.png" type="image/png" />
+              <source srcset="./content/img/hero.avif" type="image/avif" />
+
               <img
                 class="w-full tablets:w-[60%] phones:w-[80%]"
-                src="./content/img/hero.png"
+                src="./content/img/hero-min.webp"
                 alt="Woman enjoying food, meals in storage container, and food bowls on table"
               />
             </picture>
@@ -1145,7 +1147,7 @@
       </footer>
     </main>
 
-    <script>
+    <script defer>
       function onOpenMenuClick() {
         document.getElementById("header").classList.add("openNav");
         document.getElementById("openMenuIcon").classList.add("hidden");
@@ -1193,10 +1195,12 @@
       observer.observe(heroSectionEl);
     </script>
     <script
+      defer
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
+      defer
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
