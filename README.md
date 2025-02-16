@@ -1,5 +1,7 @@
 # [Omnifood Website Project 🚀](https://fondril.github.io/omnifood/)
 
+![Picture of Omnifood website on a laptop.](./content/img/READMEBanner.png)
+
 Omnifood is a modern, responsive website designed to showcase a food delivery service. Built using HTML5, Tailwind CSS, JavaScript, and Git for version control, it provides a seamless, user-friendly experience across devices. I used this project to practice my HTML, Tailwind CSS, and design skills while ensuring a clean user interface.
 
 ## Features
