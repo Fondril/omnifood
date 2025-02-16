@@ -1,4 +1,4 @@
-# [Omnifood Website Project 🚀](https://fondril.github.io/omnifood/)
+# [Omnifood Website Project](https://fondril.github.io/omnifood/)
 
 ![Picture of Omnifood website on a laptop.](./content/img/READMEBanner.png)
 
